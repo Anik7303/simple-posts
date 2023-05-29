@@ -14,9 +14,9 @@ import { error404, errorsMiddleware } from "./middlewares/index";
 import { testRoutes } from "./routes/index";
 
 // variables
-const HOST = process.env.HOST || "127.0.0.1";
+// const HOST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || "8000";
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/test";
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/test";
 
 const app = express();
 
@@ -29,6 +29,6 @@ app.use(testRoutes);
 app.use(error404);
 app.use(errorsMiddleware);
 
-app.listen(parseInt(PORT), HOST, () => {
-  console.log(`Server address: http://${HOST}:${PORT}`);
+app.listen(parseInt(PORT), () => {
+  console.log(`server running on port ${PORT}`);
 });
