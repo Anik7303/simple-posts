@@ -1,0 +1,11 @@
+# node package files
+node_modules/*
+
+# production
+build/*
+
+# environment files
+.env*
+!.env.example
+
+# misc
